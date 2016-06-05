@@ -1,0 +1,204 @@
+<!--------------------------->
+
+<nav class="navbar navbar-default navbar-fixed-top" ng-controller="HomeController" role="navigation">
+  <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+
+        <button type="button" class="navbar-toggle" ng-init="navCollapsed = true" ng-click="navCollapsed = !navCollapsed">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">
+        <img alt="IANA" src="images/mindmap.png"></a>
+      </div>
+    
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" ng-class="!navCollapsed && 'in'">
+      
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#">Home</a></li>
+          <li><a href="#">Newton's Laws</a></li>
+          <li><a href="#">Energy</a></li>
+          <li><a href="#">Electricity</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          
+          <li><a href="#/login">Logout</a></li>
+          
+        <!--<li dropdown>
+            <a href="#" dropdown-toggle>Menu <b class="caret" id="menuham"></b></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Action</a></li>
+              <li><a href="#">Another action</a></li>
+              <li><a href="#">Something else here</a></li>
+              <li><a href="#">Separated link</a></li>
+              <li><a href="#">One more separated link</a></li>
+            </ul>
+          </li>-->
+        </ul>
+        </div> <!--container fluid-->
+      </div><!-- /.navbar-collapse -->
+    </nav>
+    
+    <div><h1 id="welcome">Welcome to the IANA Interactive Quiz Generator!</h1>
+    <br></br>
+    
+    
+    <div class="row">
+         <div class="col-sm-1 btn-group-vertical">
+             <button type = "button" class = "btn btn-default btn-space" ui-sref="home.question1">Q1</button>
+             <button type = "button" class = "btn btn-default btn-space" ui-sref="home.question2">Q2</button>
+             <button type = "button" class = "btn btn-default btn-space" ui-sref="home.question3">Q3</button>
+             <button type = "button" class = "btn btn-default btn-space" ui-sref="home.question4">Q4</button>
+             <button type = "button" class = "btn btn-default btn-space" ui-sref="home.question5">Q5</button>
+             <button type = "button" class = "btn btn-default btn-space" ui-sref="home.question6">Q6</button>
+        </div>
+  
+  
+  <div class="col-sm-10">
+    <main class="l-one-whole">
+    <section class="container1">
+      <article class="l-one-whole">
+
+        <div ui-view="math" class="slide"></div>
+
+      </article>
+    </section>
+  </main>
+  </div>
+  
+ <!-- <div class="col-sm-4">
+    <main class="l-one-whole">
+    <section class="container2">
+      <article class="l-one-whole">
+
+        <div ui-view="background" class="slide"></div>
+
+      </article>
+    </section>
+  </main>
+  </div>-->
+  
+  </div>
+      
+
+    
+      
+  </div>
+  </div>
+
+  
+  <!--<nav class="navbar navbar-default navbar-fixed-bottom" ID="bottomfooter">
+  <div class="navbar-inner navbar-content-center">
+            <p class="text-muted">Put button here to access background information using angular aside</p>
+  </div>
+  </nav>-->
+  
+ <div ng-controller="AsideCtrl">
+   <span class="pull-right">
+            <button type="button" class="btn btn-default btn-lg" ng-click="openAside('bottom', true)">
+              Down <span class="glyphicon glyphicon-arrow-up"></span>
+            </button>
+  </span>
+  </div>
+  
+<!--<nav mfb-menu position="br" effect="zoomin" label="click me"
+     active-icon="ion-edit" resting-icon="ion-plus-round"
+     toggling-method="hover">
+  <button mfb-button icon="paper-airplane" label="menu item"></button>
+</nav>-->
+
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+<!-- try this http://plnkr.co/edit/e5BUJsq8Ipw7vuwyLZPO?p=preview-->
+
+<!--<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">
+        <img alt="IANA" src="images/mindmap.png">
+      </a>
+      <ul class="nav navbar-nav">
+          <li class="active"><a href="#">Home</a></li>
+          <li><a href="#">Newton's Laws</a></li>
+          <li><a href="#">Energy</a></li>
+          <li><a href="#">Electricity</a></li>
+      </ul>
+        </div>
+      <div class="navbar pull-right">
+          <h4><a href="#/login">Logout</a></h4>
+      </div>
+    </div>
+  
+    </div>
+  </div>
+</nav>
+    
+    <div><h1 id="welcome">Welcome to the IANA Interactive Quiz Generator!</h1>
+    <br></br>
+    
+    
+    <div class="row">
+         <div class="col-sm-1 btn-group-vertical">
+             <button type = "button" class = "btn btn-default btn-space" ui-sref="home.question1">Q1</button>
+             <button type = "button" class = "btn btn-default btn-space" ui-sref="home.question2">Q2</button>
+             <button type = "button" class = "btn btn-default btn-space" ui-sref="home.question3">Q3</button>
+             <button type = "button" class = "btn btn-default btn-space" ui-sref="home.question4">Q4</button>
+             <button type = "button" class = "btn btn-default btn-space" ui-sref="home.question5">Q5</button>
+             <button type = "button" class = "btn btn-default btn-space" ui-sref="home.question6">Q6</button>
+        </div>
+  
+  
+  <div class="col-sm-6">
+  
+  <div ui-view="math"></div></div>
+  
+  
+     
+  
+  <div class="col-sm-4">
+    
+  <div  ui-view="background"></div>
+  
+  </div></div>
+      
+        
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      
+  </div>-->
